@@ -1,0 +1,80 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: kube-ops
+  name: drone-svr
+  labels:
+    app: drone
+spec:
+  selector:
+    matchLabels:
+      app: drone_svr
+  replicas: 1
+  template:
+    metadata:
+      namespace: kube-ops
+      labels:
+        app: drone_svr
+    spec:
+      serviceAccountName: drone
+      hostAliases:
+      - ip: "192.168.0.201"
+        hostnames:
+        - "gitlab.zw.com"
+        - "drone.zw.com"
+      - ip: "192.168.0.202"
+        hostnames:
+        - "gitlab.zw.com"
+        - "drone.zw.com"
+      containers:
+      - name: server
+        image: "drone/drone:1.6"
+        imagePullPolicy: IfNotPresent
+        env:
+        # - name: DRONE_LOGS_DEBUG
+        #   value: "true"
+        # - name: DRONE_LOGS_TRACE
+        #   value: "true"
+        - name: DRONE_TLS_AUTOCERT
+          value: "false"
+        - name: DRONE_GITLAB_SERVER
+          value: "http://gitlab.zw.com"
+        - name: DRONE_GITLAB_CLIENT_ID
+          value: "460b2ae1588aab8190eae437818fc1017a0d8b0149b4067f77205614cb04a217"
+        - name: DRONE_GITLAB_CLIENT_SECRET
+          value: "84a1af5f158af6b99ca105cff4f48d1650775be76da1fd5dbf6b2770fffcdcb2"
+        - name: DRONE_GIT_ALWAYS_AUTH
+          value: "true"
+        - name: DRONE_SERVER_HOST
+          value: "drone.zw.com"
+        - name: DRONE_SERVER_PROTO
+          value: "http"
+        - name: DRONE_RPC_SECRET
+          value: "b0a7e0969f6736a09a73c1e4933809de"
+        - name: DRONE_DATABASE_DATASOURCE
+          value: "/var/lib/drone/drone.sqlite"
+        - name: DRONE_DATABASE_DRIVER
+          value: "sqlite3"
+        - name: DRONE_USER_CREATE
+          value: username:root,admin:true
+        ports:
+        - name: http
+          containerPort: 80
+          protocol: TCP
+        # - name: https
+        #   containerPort: 443
+        #   protocol: TCP
+        - name: grpc
+          containerPort: 9000
+          protocol: TCP
+        livenessProbe:
+          httpGet:
+            path: /
+            port: http       
+        volumeMounts:
+        - name: data
+          mountPath: /var/lib/drone
+      volumes:
+      - name: data
+        persistentVolumeClaim:
+          claimName: pvc-drone
