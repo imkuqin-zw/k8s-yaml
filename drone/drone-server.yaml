@@ -18,11 +18,11 @@ spec:
     spec:
       serviceAccountName: drone
       hostAliases:
-      - ip: "192.168.0.201"
+      - ip: "192.168.2.17"
         hostnames:
         - "gitlab.zw.com"
         - "drone.zw.com"
-      - ip: "192.168.0.202"
+      - ip: "192.168.2.101"
         hostnames:
         - "gitlab.zw.com"
         - "drone.zw.com"
@@ -38,11 +38,11 @@ spec:
         - name: DRONE_TLS_AUTOCERT
           value: "false"
         - name: DRONE_GITLAB_SERVER
-          value: "http://gitlab.zw.com"
+            value: "http://gitlab.zw.com"
         - name: DRONE_GITLAB_CLIENT_ID
-          value: "460b2ae1588aab8190eae437818fc1017a0d8b0149b4067f77205614cb04a217"
+          value: "86baf36b2d1adf591d42a65f660403a7a8fc166e0243cd934acb429000c9c1e0"
         - name: DRONE_GITLAB_CLIENT_SECRET
-          value: "84a1af5f158af6b99ca105cff4f48d1650775be76da1fd5dbf6b2770fffcdcb2"
+          value: "0ab6f8722846ea12446592cdb3ad4ff9b228d94593e8e249c14b5d42662de35a"
         - name: DRONE_GIT_ALWAYS_AUTH
           value: "true"
         - name: DRONE_SERVER_HOST

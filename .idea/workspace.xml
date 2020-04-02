@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3119fb5a-3ec8-4e43-8c84-344dc0f08dba" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/drone/drone-pvc.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/drone/drone-pvc.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drone/drone-server.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/drone/drone-server.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gitlab.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/gitlab.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgresql.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/postgresql.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redis.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/redis.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1YscMTdww1bU4um0E7k8M2jd2ZH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test_drone" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Docker" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="455" y="164" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583748634367">
+      <screen x="0" y="24" width="1920" height="996" />
+    </state>
+    <state x="455" y="164" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.24.1920.996@0.24.1920.996" timestamp="1583748634367" />
+    <state x="900" y="279" width="424" height="484" key="FileChooserDialogImpl" timestamp="1583754334518">
+      <screen x="0" y="24" width="1920" height="996" />
+    </state>
+    <state x="900" y="279" width="424" height="484" key="FileChooserDialogImpl/0.24.1920.996@0.24.1920.996" timestamp="1583754334518" />
+    <state x="496" y="275" width="672" height="678" key="search.everywhere.popup" timestamp="1583755875987">
+      <screen x="0" y="24" width="1920" height="996" />
+    </state>
+    <state x="496" y="275" width="672" height="678" key="search.everywhere.popup/0.24.1920.996@0.24.1920.996" timestamp="1583755875987" />
+  </component>
+</project>

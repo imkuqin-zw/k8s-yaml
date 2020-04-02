@@ -11,8 +11,8 @@ spec:
   accessModes:
     - ReadWriteMany
   nfs:
-    server: 192.168.0.200
-    path: "/root/data/drone"
+    server: 192.168.2.118
+    path: "/data/zw_share/drone"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
