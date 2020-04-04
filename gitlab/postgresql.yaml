@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: pvc-postgresql
-  namespace: kube-ops
+  namespace: cicd
 spec:
   accessModes:
     - ReadWriteMany
@@ -15,7 +15,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: postgresql
-  namespace: kube-ops
+  namespace: cicd
   labels:
     name: postgresql
 spec:
@@ -28,7 +28,7 @@ spec:
       labels:
         name: postgresql
         app: postgresql
-      namespace: kube-ops
+      namespace: cicd
     spec:
       containers:
       - name: postgresql
@@ -45,7 +45,7 @@ spec:
         - name: postgresql
           containerPort: 5432
         volumeMounts:
-        - mountPath: /var/lib/postgresql
+        - mountPath: /var/lib/postgresql/data
           name: nfs
         livenessProbe:
           exec:
@@ -76,7 +76,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: postgresql
-  namespace: kube-ops
+  namespace: cicd
   labels:
     name: postgresql
 spec:

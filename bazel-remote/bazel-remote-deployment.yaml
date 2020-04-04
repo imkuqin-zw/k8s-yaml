@@ -1,0 +1,36 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  labels:
+    name: bazel-remote
+  name: bazel-remote
+  namespace: cicd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: bazel-remote
+  template:
+    metadata:
+      labels:
+        name: bazel-remote
+    spec:
+      containers:
+        - name: bazel-remote
+          image: buchgr/bazel-remote-cache
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: BAZEL_REMOTE_PORT
+              value: "8080"
+          ports:
+            - name: http
+              containerPort: 8080
+            - name: grpc
+              containerPort: 9092
+          volumeMounts:
+            - name: data
+              mountPath: /data
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: pvc-bazel-remote

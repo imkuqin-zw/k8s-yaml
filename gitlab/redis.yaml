@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: pvc-redis
-  namespace: kube-ops
+  namespace: cicd
 spec:
   accessModes:
     - ReadWriteMany
@@ -15,7 +15,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: redis
-  namespace: kube-ops
+  namespace: cicd
   labels: 
     name: redis
 spec:
@@ -31,7 +31,7 @@ spec:
       labels:
         name: redis
         app: redis
-      namespace: kube-ops
+      namespace: cicd
     spec:
       containers:
       - name: redis
@@ -66,7 +66,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: redis
-  namespace: kube-ops
+  namespace: cicd
   labels:
     name: redis
 spec:
